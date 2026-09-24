@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Chalk Board';
-    src: url(Chalk\ Board.otf) format('opentype'),
-         url(Chalk\ Board.ttf) format('truetype');
+    src: url('Chalk Board.otf') format('opentype'),
+         url('Chalk Board.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
@@ -13,12 +13,18 @@
     font-family: 'Fredoka', cursive, sans-serif;
 }
 
-
-
-body {
-    overflow: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fdf6e9;
+    color: #4a2428;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Header */
 .navbar {
     position: fixed;
     top: 0;
@@ -37,6 +43,8 @@ body {
     font-size: 30px;
     font-weight: 700;
     font-family: 'Chalk Board', sans-serif;
+    margin: 0;
+    line-height: 1;
 }
 
 .nav-links {
@@ -60,22 +68,23 @@ body {
     padding-bottom: 3px;
 }
 
-
+/* Hero Section / Tela Inicial */
 .hero-section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
 .hero-background {
     width: 100%;
     height: 100%;
-    background-image: url('telainicialjogo.jpeg');
+    background-image: 
+        linear-gradient(to bottom, rgba(253, 246, 233, 0) 65%, #fdf6e9 100%), 
+        url('telainicialjogo.jpeg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
 
 .placalogo {
     position: absolute;
@@ -98,4 +107,82 @@ body {
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Seções Principais (Sobre o Jogo, Sobre Nós, Como Jogar) */
+.sobre-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fdf6e9;
+}
+
+#sobre {
+    padding-top: 60px;
+}
+
+.sobre-card {
+    background-color: #ffffff;
+    max-width: 850px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid #a42d07;
+    box-shadow: 0 8px 20px rgba(164, 45, 7, 0.15);
+    text-align: center;
+}
+
+.sobre-card h2 {
+    font-size: 2.2rem;
+    color: #a42d07;
+    margin-bottom: 25px;
+    font-family: 'Chalk Board', sans-serif;
+}
+
+.sobre-card p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a2428;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.sobre-card p.destaque {
+    font-weight: 600;
+    background-color: #fdf6e9;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #a42d07;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+/* Ajustes na caixa do vídeo para se manter fluida e responsiva */
+.video-box {
+    position: relative; /* Mudado de absolute para relative */
+    width: 100%;
+    max-width: 750px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: rgba(255, 245, 237, 0.85);
+    border: 6px solid #a42d07;
+    border-radius: 20px;
+    box-shadow:
+        0 8px 0 #7e2408,
+        0 12px 25px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+}
+
+.video-area {
+    width: 100%;
+    height: 100%;
+    border: 3px dashed #d65a3a;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a42d07;
+    font-size: 22px;
+    font-weight: 600;
 }
