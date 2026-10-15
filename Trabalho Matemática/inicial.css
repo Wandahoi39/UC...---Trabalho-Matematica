@@ -160,7 +160,7 @@ body {
 
 /* Ajustes na caixa do vídeo para se manter fluida e responsiva */
 .video-box {
-    position: relative; /* Mudado de absolute para relative */
+    position: relative;
     width: 100%;
     max-width: 750px;
     height: 400px;
@@ -185,4 +185,101 @@ body {
     color: #a42d07;
     font-size: 22px;
     font-weight: 600;
+}
+
+/* Seção de Botões no Final da Página */
+.botoes-secao {
+    padding: 20px 20px 50px 20px;
+    background-color: #fdf6e9;
+    display: flex;
+    justify-content: center;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.botao {
+    height: 43px;
+    padding: 0 10px;
+    background: #000;
+    color: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.botao:hover {
+    transform: scale(1.08);
+}
+
+.botao img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.texto {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.texto small {
+    display: block;
+    font-size: 9px;
+    margin-bottom: 2px;
+}
+
+.texto strong {
+    display: block;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+}
+
+.apple { width: 149px; }
+.google { width: 148px; }
+.amazon { width: 130px; }
+.steam { width: 154px; }
+
+/* Amazon Appstore */
+.amazon img {
+    width: 30px;
+    height: 30px;
+}
+
+.amazon .texto strong {
+    font-size: 16px;
+}
+
+/* Nintendo Switch */
+.switch {
+    width: 148px;
+    background: #ed252d;
+    gap: 5px;
+    padding: 0 8px;
+}
+
+.switch img {
+    width: 34px;
+    height: 34px;
+}
+
+.switch .texto small {
+    letter-spacing: 2px;
+}
+
+.switch .texto strong {
+    font-size: 16px;
+    letter-spacing: 2px;
 }
